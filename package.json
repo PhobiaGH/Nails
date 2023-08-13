@@ -1,0 +1,33 @@
+{
+  "name": "nails",
+  "version": "1.0.0",
+  "description": "Web Scrapper",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhobiaGH/Nails.git"
+  },
+  "keywords": [
+    "web",
+    "scrapper",
+    "info",
+    "gathering",
+    "automation"
+  ],
+  "author": "Phobia",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/PhobiaGH/Nails/issues"
+  },
+  "homepage": "https://github.com/PhobiaGH/Nails#readme",
+  "dependencies": {
+    "puppeteer": "^21.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
