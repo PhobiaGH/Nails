@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/PhobiaGH/Nails#readme",
   "dependencies": {
+    "jsdom": "^22.1.0",
     "puppeteer": "^21.0.3"
   },
   "devDependencies": {
