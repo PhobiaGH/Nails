@@ -20,7 +20,7 @@ async function browse () {
     const page = await browser.newPage(scrapePage)
     await page.goto(`${baseURL}`)
     var d = new Date()
-    const dir = `./Scrapped/${d}`
+    const dir = `./Scraped/${d}`
     if (!fs.existsSync(dir)) {
         await fs.mkdirSync(dir);
     };
