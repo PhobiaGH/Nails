@@ -1,8 +1,8 @@
-// Just for testing atm
 const puppeteer = require('puppeteer');
 const {scrapePage} = require('./scrape.js');
 const fs  = require('fs');
 
+// Main code for starting puppeteer and grabbing site screenshots
 async function browse () {
     // Makes sure input is a valid URL
     if (process.argv.length < 3) {
@@ -20,7 +20,7 @@ async function browse () {
     const page = await browser.newPage(scrapePage)
     await page.goto(`${baseURL}`)
     var d = new Date()
-    const dir = `./Screenshots/${d}`
+    const dir = `./Scrapped/${d}`
     if (!fs.existsSync(dir)) {
         await fs.mkdirSync(dir);
     };
