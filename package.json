@@ -2,9 +2,9 @@
   "name": "nails",
   "version": "1.0.0",
   "description": "Web Scrapper",
-  "main": "main.js",
+  "main": "scrape.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node scrape.js",
     "test": "jest"
   },
   "repository": {

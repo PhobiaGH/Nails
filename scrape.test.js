@@ -3,7 +3,7 @@ If you are looking for the meat and bones of the code, you may safely ignore thi
 file unless you are interested in the complete workings of this app. Feel free install 
 Jest on your own machine, and borrow the code below if you are interested in giving Jest a try */
 
-const {normalizeURL, getURLsFromHTML} = require('./scrape.js');
+const {normalizeURL, getURLsFromHTML} = require('./scrapePage.js');
 const {test,expect} =require('@jest/globals');
 
 // Tests that the protocol gets stripped
