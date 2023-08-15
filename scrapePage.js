@@ -32,7 +32,7 @@ async function scrapePage(baseURL, currentURL) {
 
 // Grabs URLs, changes relative URLs into absolute URLs, and catches invalid URLs
 function getURLsFromHTML(htmlBody, baseURL) {
-    const urls = []
+    const urls = [] //˚ʚ🦊ɞ˚
     const dom = new JSDOM(htmlBody)
     const linkElements = dom.window.document.querySelectorAll('a')
     for (const element of linkElements) {
