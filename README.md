@@ -49,7 +49,7 @@ Installation, and use steps:
     
     npm install
 
-10: Start the programm
+10: Start the program
     
     npm start https://www.url-you-wish-to-use.com/
 
