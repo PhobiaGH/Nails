@@ -17,8 +17,8 @@ async function scrape () {
     };
 
     // Grabs URL you pass to the terminal
-    const baseURL = process.argv[2]
-    console.log(`Starting to scrape ${baseURL}`)
+    const baseURL = process.argv[2];
+    console.log(`Starting to scrape ${baseURL}`);
     
     // Starts headless browser, and directs to site
     const browser = await puppeteer.launch({headless: "new"})
@@ -29,7 +29,7 @@ async function scrape () {
         height: 1080
     });
 
-    await autoScroll(page, 500)
+    await autoScroll(page, 500);
     
     // Creates new dir, saves screenshot of site, all text inside page body, and all pictures on site
     var d = new Date()
@@ -40,15 +40,24 @@ async function scrape () {
         return Array.from(document.querySelectorAll("body")).map(x => x.textContent)
     });
     
+    // Creates .txt with all text on page
     await fs.writeFile(`./${dir}/text.txt`, text.join("\r\n"))
     const photos = await page.$$eval("img", imgs => {
         return imgs.map(x => x.src)
     });
+
+    // Clicks buttons to reveal any text hidden behind CSS, or a JS function
+    const links = await page.$$eval("a", link => {
+        return link.map(x => x.href)
+    });
+    await fs.writeFile(`${dir}/links.txt`, links.join("\r\n"));
     
+    // Visits img URL, and downloads the img
     for (const photo of photos) {
         const imagePage = await page.goto(photo)
         await fs.writeFile(`${dir}/${photo.split("/").pop()}`, await imagePage.buffer())
     }
+    console.log(links);
     await browser.close()
 };
 
