@@ -64,7 +64,7 @@ async function scrape () {
     for (const photo of photos) {
         const imagePage = await page.goto(photo)
         await fs.writeFile(`${dir}/${photo.split("/").pop()}`, await imagePage.buffer())
-    }
+    };
     console.log(links)
     await browser.close()
 };
