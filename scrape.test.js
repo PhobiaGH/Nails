@@ -43,15 +43,15 @@ test('getURLsFromHTML absolute', () => {
     const HTMLBody = `
         <html>
             <body>
-                <a href="https://github.com/PhobiaGH/Phoogle/">
+                <a href="https://github.com/PhobiaGH/Nails/">
                     PhobiaGH
                 </a>
             </body>
         </html>
     `
-    const BaseURL = "https://github.com/PhobiaGH/Phoogle/"
+    const BaseURL = "https://github.com/PhobiaGH/Nails/"
     const actual = getURLsFromHTML(HTMLBody, BaseURL)
-    const expected = ["https://github.com/PhobiaGH/Phoogle/"]
+    const expected = ["https://github.com/PhobiaGH/Nails/"]
     expect(actual).toEqual(expected)
 });
 
@@ -60,7 +60,7 @@ test('getURLsFromHTML relative', () => {
     const HTMLBody = `
         <html>
             <body>
-                <a href="/PhobiaGH/Phoogle">
+                <a href="/PhobiaGH/Nails">
                     PhobiaGH
                 </a>
             </body>
@@ -68,6 +68,6 @@ test('getURLsFromHTML relative', () => {
     `
     const BaseURL = "https://github.com"
     const actual = getURLsFromHTML(HTMLBody, BaseURL)
-    const expected = ["https://github.com/PhobiaGH/Phoogle"]
+    const expected = ["https://github.com/PhobiaGH/Nails"]
     expect(actual).toEqual(expected)
 });
