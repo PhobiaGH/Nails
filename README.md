@@ -53,4 +53,4 @@ Installation, and use steps:
     
     npm start https://www.url-you-wish-to-use.com/
 
-That's it!
+That's it! Once the page has been scraped, all of the extracted data will be added to the Scraped folder.
