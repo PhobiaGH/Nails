@@ -29,35 +29,43 @@ async function scrape () {
         height: 1080
     });
 
-    await autoScroll(page, 500);
+    await autoScroll(page, 250);
     
     // Creates new dir, saves screenshot of site, all text inside page body, and all pictures on site
-    var d = new Date()
-    const dir = `./Scraped/${d}`
+    var d = new Date();
+    const dir = `./Scraped/${d}`;
     await fs.mkdir(dir);
-    await page.screenshot({path: `./${dir}/screenshot.png` , fullPage: true})
+    await page.screenshot({path: `./${dir}/screenshot.png` , fullPage: true});
+    
+// Creates text.txt with all text on page
     const text = await page.evaluate(() => {
         return Array.from(document.querySelectorAll("body")).map(x => x.textContent)
     });
-    
-    // Creates .txt with all text on page
-    await fs.writeFile(`./${dir}/text.txt`, text.join("\r\n"))
-    const photos = await page.$$eval("img", imgs => {
-        return imgs.map(x => x.src)
-    });
+    await fs.writeFile(`./${dir}/text.txt`, text.join("\r\n"));
 
-    // Clicks buttons to reveal any text hidden behind CSS, or a JS function
+    // Grabs any links onpage, and saves them to links.txt
     const links = await page.$$eval("a", link => {
         return link.map(x => x.href)
     });
     await fs.writeFile(`${dir}/links.txt`, links.join("\r\n"));
-    
+
+    /* Still in development please ignore for now
+    await page.type("input", "");
+    await Promise.all([page.click("button"), page.waitForNavigation()]);
+    const info = await page.$eval("h1", el => el.textContent);
+    const info2 = await page.$eval("p", el => el.textContent);
+    console.log(info);
+    console.log(info2); */
+
+    const photos = await page.$$eval("img", imgs => {
+        return imgs.map(x => x.src)
+    });
     // Visits img URL, and downloads the img
     for (const photo of photos) {
         const imagePage = await page.goto(photo)
         await fs.writeFile(`${dir}/${photo.split("/").pop()}`, await imagePage.buffer())
     }
-    console.log(links);
+    console.log(links)
     await browser.close()
 };
 
