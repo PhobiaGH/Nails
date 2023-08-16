@@ -1,7 +1,7 @@
 {
   "name": "nails",
   "version": "1.0.0",
-  "description": "Web Scrapper",
+  "description": "Web Scraper",
   "main": "scrape.js",
   "scripts": {
     "start": "node scrape.js",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/PhobiaGH/Nails#readme",
   "dependencies": {
     "jsdom": "^22.1.0",
+    "play-sound": "^1.1.5",
     "puppeteer": "^21.0.3"
   },
   "devDependencies": {

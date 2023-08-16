@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 const {scrapePage} = require('./scrapePage.js');
 const fs  = require('fs/promises');
+const player = require('play-sound') (opts = {});
 
 // Main function, the meat and potatoes if you will.... and you will....
 async function scrape () {
@@ -21,9 +22,9 @@ async function scrape () {
     console.log(`Starting to scrape ${baseURL}`);
     
     // Starts headless browser, and directs to site
-    const browser = await puppeteer.launch({headless: "new"})
-    const page = await browser.newPage(scrapePage)
-    await page.goto(`${baseURL}`)
+    const browser = await puppeteer.launch({headless: "new"});
+    const page = await browser.newPage(scrapePage);
+    await page.goto(`${baseURL}`);
     await page.setViewport({
         width: 1920,
         height: 1080
@@ -65,8 +66,19 @@ async function scrape () {
         const imagePage = await page.goto(photo)
         await fs.writeFile(`${dir}/${photo.split("/").pop()}`, await imagePage.buffer())
     };
-    console.log(links)
-    await browser.close()
+    console.log(links);
+    await browser.close();
+
+    // Play sound effect once program is done running
+    await player.play('ding.mp3', function (err) {
+        if (err) throw err
+    });
+
+    // Manual kill
+    const audio = player.play('ding.mp3', function (err) {
+        if (err && !err.killed) throw err
+    });
+    audio.kill();
 };
 
 // Auto scrolls down to load the entire page before extracting data
@@ -97,6 +109,35 @@ async function autoScroll(page, maxScrolls) {
 };
 
 scrape();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀
