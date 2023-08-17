@@ -34,7 +34,15 @@ async function scrapePage(baseURL, currentURL) {
 function getURLsFromHTML(htmlBody, baseURL) {
     const urls = []; //˚ʚ🦊ɞ˚
     const dom = new JSDOM(htmlBody);
-    const linkElements = dom.window.document.querySelectorAll('a');
+    const linkElements = dom.window.document.querySelectorALL('a');
+
+    // Removes the rel, and target attributes from <a> tags
+    const link = dom.window.document.querySelector('a');
+    if (link) {
+        link.removeAttribute('rel');
+        link.removeAttribute('target');
+    };
+    
     for (const element of linkElements) {
         if (element.href.slice(0, 1) === '/') {
             // Relative URLs
