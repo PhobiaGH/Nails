@@ -48,8 +48,6 @@ esac
 
 done
 
-alias=alias nails='cd /home/$USER/Nails && ./nails.sh'
-
 printf "alias nails='cd /home/$USER/Nails && ./nails.sh'" >> /home/$USER/.bashrc
     
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
