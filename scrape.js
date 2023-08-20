@@ -1,9 +1,4 @@
-const puppeteer = require('puppeteer');
-const {scrapePage} = require('./scrapePage.js');
-const fs  = require('fs/promises');
-const player = require('play-sound') (opts = {});
-
-console.log(`
+/*
     _/      _/            _/  _/            
    _/_/    _/    _/_/_/      _/    _/_/_/   
   _/  _/  _/  _/    _/  _/  _/  _/_/        
@@ -25,7 +20,12 @@ _/      _/    _/_/_/  _/  _/  _/_/_/
 ⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣋⣁⣤⣀⣀⣤⣤⣤⣤⣄⣿⡄⠀⠀⠀⠀
 ⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠋⠉⠁⠀⠀⠀⠀⠈⠛⠃⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-`);
+*/
+
+const puppeteer = require('puppeteer');
+const {scrapePage} = require('./scrapePage.js');
+const fs  = require('fs/promises');
+const player = require('play-sound') (opts = {});
 
 // Main function, the meat and potatoes if you will.... and you will....
 async function scrape () {
@@ -73,14 +73,6 @@ async function scrape () {
         return link.map(x => x.href)
     });
     await fs.writeFile(`${dir}/links.txt`, links.join("\r\n"));
-
-    /* Still in development please ignore for now
-    await page.type("input", "");
-    await Promise.all([page.click("button"), page.waitForNavigation()]);
-    const info = await page.$eval("h1", el => el.textContent);
-    const info2 = await page.$eval("p", el => el.textContent);
-    console.log(info);
-    console.log(info2); */
 
     const photos = await page.$$eval("img", imgs => {
         return imgs.map(x => x.src)
