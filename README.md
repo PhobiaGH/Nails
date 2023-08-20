@@ -49,8 +49,8 @@ Installation, and use steps:
     
     npm install
 
-10: Start the program
+10: To use Nails, open terminal in Nails directory, and enter
     
-    npm start https://www.url-you-wish-to-use.com/
+    ./nails.sh
 
 That's it! Once the page has been scraped, all of the extracted data will be added to the Scraped folder.
