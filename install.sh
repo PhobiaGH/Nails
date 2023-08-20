@@ -25,7 +25,7 @@ _/      _/    _/_/_/  _/  _/  _/_/_/
 "
 
 echo "Nails uses a package called NVM to manage which version of Node is being utilized.
-NVM is required for auto updates, if you do not wish to have NVM installed on your system,
+NVM is required for updates in the future, if you do not wish to have NVM installed on your system,
 you will need to follow the manual install instructions provided in the README.md:
 "
 
