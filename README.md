@@ -3,23 +3,19 @@ Fork of @LearnWebCode's web scraper. This is a NodeJS app utilizing Puppeteer to
 
 Installation, and use steps:
 
-1: cd into dir you wish to store the code
-
-    cd /pathto/dir
-
-2: Clone the repo
+1: Clone the repo
 
     git clone https://github.com/PhobiaGH/Nails
 
-3: Install nvm (Alterantively you can just install node directly from your distros repo if you don't care about being able to manage multiple node installs. This program uses node 19.9.0. If you skip installing nvm you may go right to step 8.)
+2: Install nvm (Alterantively you can just install node directly from your distros repo if you don't care about being able to manage multiple node installs. This program uses node 19.9.0. If you skip installing nvm you may go right to step 8.)
 
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 
-4: In your terminal type,
+3: In your terminal type,
 
     nvm -v
 
-5: If you get "command nvm not found" type the following codes into your terminal, otherwise skip to step 6
+4: If you get "command nvm not found" type the following codes into your terminal, otherwise skip to step 6
 
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
     
@@ -33,27 +29,27 @@ Installation, and use steps:
 
     nvm -v
 
-6: Install Node Version Manager
+5: Install Node Version Manager
     
     nvm install
 
-7: Use installed node version
+6: Use installed node version
     
     nvm use
 
-8: cd into Nails dir
+7: cd into Nails dir
 
     cd /path/to/dir
 
-9: Install node dependencies
+8: Install node dependencies
     
     npm install
 
-10: To use Nails on Windows, open CMD in the Nails directory, and enter
+9: To use Nails on Windows, open CMD in the Nails directory, and enter
     
     npm start https://www.url-you-wish-to-use.com/ 
 
-11: Linux users open your terminal in the Nails directory, and enter
+10: Linux users open your terminal in the Nails directory, and enter
 
     ./nails.sh
 
