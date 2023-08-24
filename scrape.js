@@ -55,7 +55,7 @@ async function scrape () {
     });
 
     await autoScroll(page, 500);
-    
+
     // Creates new dir, saves screenshot of site, all text inside page body, and all pictures on site
     var d = new Date();
     const dir = `./Scraped/${d}`;
