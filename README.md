@@ -13,9 +13,10 @@ Fork of @LearnWebCode's web scraper. This is a NodeJS app utilizing Puppeteer to
 
 3: Type this command, hit enter, and follow the prompts:
 
-    ./install.sh
+    sudo ./install.sh
 
-That's it! Once the page has been scraped, all of the extracted data will be added to the Scraped folder.
+That's it! Once the page has been scraped, all of the extracted data will be added to a folder named
+as your systems current date and time in the Nails directory.
 
 # Manual installation, and use steps:
 
@@ -62,4 +63,5 @@ That's it! Once the page has been scraped, all of the extracted data will be add
     ./nails.sh
 
     
-That's it! Once the page has been scraped, all of the extracted data will be added to the Scraped folder.
+That's it! Once the page has been scraped, all of the extracted data will be added to a folder named
+as your systems current date and time in the Nails directory.

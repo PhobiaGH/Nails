@@ -58,7 +58,7 @@ async function scrape () {
 
     // Creates new dir, saves screenshot of site, all text inside page body, and all pictures on site
     var d = new Date();
-    const dir = `./Scraped/${d}`;
+    const dir = `./${d}`;
     await fs.mkdir(dir);
     await page.screenshot({path: `./${dir}/screenshot.png` , fullPage: true});
     
