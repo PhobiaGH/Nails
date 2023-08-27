@@ -24,7 +24,7 @@ as your systems current date and time in the Nails directory.
 
     git clone https://github.com/PhobiaGH/Nails
 
-2: Install nvm (Alterantively you can just install node directly from your distros repo if you don't care about being able to manage multiple node installs. This program uses node 19.9.0. If you skip installing nvm you may go right to step 8.)
+2: Install nvm (Alterantively you can just install node directly from your distros repo if you don't care about being able to manage multiple node installs. This program uses node 19.9.0. If you skip installing nvm you may go right to step 7.)
 
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 
@@ -32,7 +32,7 @@ as your systems current date and time in the Nails directory.
 
     nvm -v
 
-4: If you get "command nvm not found" type the following codes into your terminal, otherwise skip to step 6
+4: If you get "command nvm not found" type the following codes into your terminal, otherwise skip to step 5
     
     touch ~/.bashrc
     
