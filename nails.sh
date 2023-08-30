@@ -26,6 +26,11 @@ _/      _/    _/_/_/  _/  _/  _/_/_/
 ⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉
 "
 
-read -p "Please enter the URL you wish to scrape: " URL
+read -ep "Please enter the URL you wish to scrape: " URL
 
-npm start $URL
+if [[ -z "$URL" ]]; then
+   echo "No URL entered."
+   exit 1
+else
+    npm start $URL
+fi

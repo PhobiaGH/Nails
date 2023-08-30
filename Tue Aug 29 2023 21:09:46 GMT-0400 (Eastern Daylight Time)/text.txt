@@ -1,0 +1,287 @@
+
+
+  
+    
+    
+     
+    
+      
+      
+
+        
+        
+      
+      
+       
+   
+  
+  
+    Skip Quicknav
+    
+      
+      Blog
+      Micronews
+      Planet
+    
+   
+    
+ 
+
+
+
+  Debian
+
+
+
+  
+    
+      The Community
+      Debian is a Community of People!
+
+
+  
+  
+  
+  
+  
+  
+  
+    
+     
+      
+       DC22 Group Photo
+      
+      
+     
+     
+      
+       Debian Reunion Hamburg 2023
+      
+      
+     
+     
+      
+       MiniDebConf Brasília 2023
+      
+      
+     
+     
+      
+       Screenshot Calamares Installer
+      
+      
+     
+     
+      
+       Debian is like a Swiss Army Knife
+      
+      
+     
+     
+      
+       People have fun with Debian
+      
+      
+     
+      
+    
+  
+   
+   
+   
+   
+   
+   
+    
+  
+   
+   
+   
+   
+   
+   
+    
+ 
+
+    
+      
+        
+          
+        
+      
+      
+        People
+        Who we are and what we do
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        Our Philosophy
+        Why we do it, and how we do it
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        Get Involved, Contribute
+        How you can join us!
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        More...
+        Additional information about the Debian community
+      
+    
+  
+  
+    
+      The Operating System
+      Debian is a complete Free Operating System!
+      
+        
+        Download
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        Why Debian
+        What makes Debian special
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        User Support
+        Getting help and documentation
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        Security Updates
+        Debian Security Advisories (DSA)
+      
+    
+    
+      
+        
+          
+        
+      
+      
+        More...
+        Further links to downloads and software
+      
+    
+  
+
+
+
+
+
+
+  
+    
+      Project News
+      News and Announcements about Debian
+    
+    22July2023Updated Debian 12: 12.1 released
+10June2023Debian 12 bookworm released
+29April2023Updated Debian 11: 11.7 released
+10September2022Updated Debian 10: 10.13 released
+07August2022Ownership of debian.community domain
+    
+    
+      
+      
+        All the news   
+	RSS
+      
+    
+  
+
+
+ 
+
+  
+  
+
+
+This page is also available in the following languages:
+
+ عربية (Arabiya)
+ Български (Bəlgarski)
+ català
+ dansk
+ Deutsch
+ Ελληνικά (Ellinika)
+ español
+ فارسی (Farsi)
+ français
+ Galego
+ Հայերեն (hayeren)
+ Indonesia
+ Italiano
+ 한국어 (Korean)
+ magyar
+ Nederlands
+ norsk (bokmål)
+ polski
+ Português
+ Русский (Russkij)
+ suomi
+ svenska
+ Tiếng Việt
+ українська (ukrajins'ka)
+ 中文(简)
+ 中文(HK)
+ 中文(繁)
+
+How to set the default document language
+
+
+
+
+  See our contact page to get in touch. Web site source code is available.
+
+Last Modified: Sun, Jul 24 21:07:25 UTC 2022
+ 
+Last Built: Thu, Aug 3 23:28:33 UTC 2023
+  
+  Copyright © 1997-2023
+ SPI and others; See license terms
+  Debian is a registered trademark of Software in the Public Interest, Inc.
+
+
+
+ 
+
+
