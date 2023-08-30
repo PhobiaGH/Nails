@@ -29,10 +29,10 @@ NVM is required for updates in the future, if you do not wish to have NVM instal
 you will need to follow the manual install instructions provided in the README.md:
 "
 
-while true; do
+while true; do # Disclaimer for installation of nvm
 
 read -p "If you would like to proceed with installing NVM, type YES in all caps, or to cancel
-type NO in all caps. [YES/NO]: " yn
+type NO in all caps. [YES/NO]: " yn # yn = YES/NO function 
 
 case $yn in
 
@@ -48,19 +48,18 @@ esac
 
 done
 
-printf "alias nails='cd /home/$USER/Nails && ./nails.sh'" >> /home/$USER/.bashrc
+printf "alias nails='cd /home/$USER/Nails && ./nails.sh'" >> /home/$USER/.bashrc # Creates nails alias in ~/.bashrc
     
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash # Installs nvm
 
-. ~/.bashrc
+. ~/.bashrc # Loads local .bashrc file
 
-nvm install
+nvm install # Installs the version of node set in the ~/Nails/.nvmrc file
 
-nvm use
+nvm use # Sets the version of node to be used according to the ~/Nails/.nvmrc
 
-npm install
+npm install # Installs node dependencies
 
-echo "
-To start Nails, just type nails into your terminal"
+echo "To start Nails, just type nails into your terminal"
 
 exit
