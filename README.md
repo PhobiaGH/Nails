@@ -13,7 +13,7 @@ Fork of @LearnWebCode's web scraper. This is a NodeJS app utilizing Puppeteer to
 
 3: Type this command, hit enter, and follow the prompts:
 
-    sudo ./install.sh
+    ./install.sh
 
 That's it! Once the page has been scraped, all of the extracted data will be added to a folder named
 as your systems current date and time in the Nails directory.
