@@ -26,7 +26,7 @@ _/      _/    _/_/_/  _/  _/  _/_/_/
 ⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉
 "
 
-read -ep "Please enter the URL you wish to scrape: " URL # Grabs user input
+read -ep "Please enter the URL you wish to scrape, (e.g. https://debian.org): " URL # Grabs user input
 
 # Checks if user submits an empty string, returns invalid url to user
 if [[ -z "$URL" ]]; then
