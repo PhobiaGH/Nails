@@ -86,12 +86,12 @@ async function scrape () {
     await browser.close();
 
     // Play sound effect once program is done running
-    await player.play('ding.mp3', function (err) {
+    await player.play("./ding.wav", function (err) {
         if (err) throw err
     });
 
     // Manual kill
-    const audio = player.play('ding.mp3', function (err) {
+    const audio = player.play('ding.wav', function (err) {
         if (err && !err.killed) throw err
     });
     audio.kill();
