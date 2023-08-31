@@ -48,7 +48,9 @@ esac
 
 done
 
-printf "alias nails='cd /home/$USER/Nails && ./nails.sh'" >> /home/$USER/.bashrc # Creates nails alias in ~/.bashrc
+loc=$(pwd)
+
+printf "alias nails='cd $loc && ./nails.sh'" >> /home/$USER/.bashrc # Creates nails alias in ~/.bashrc
     
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash # Installs nvm
 
